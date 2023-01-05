@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+html {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding-block: 15px;
+  font-family: "Space Grotesk";
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+#backnav {
+  width: 100%;
+  height: 50vh;
+  background: none;
+  position: absolute;
+  z-index: -999;
+}
+.navbar a {
+  text-decoration: none;
+  color: #000;
+}
+.navbar a:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.logo {
+  margin-left: 1em;
+}
+.list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin-right: 2em;
+}
+#toggler,
+.navbar label {
+  display: none;
+}
+a img {
+  width: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .list {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .navbar label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  #toggler:checked ~ .menu {
+    max-height: 100%;
+  }
+}

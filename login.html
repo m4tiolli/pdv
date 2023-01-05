@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/aec2c6e751.js" crossorigin="anonymous"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="" class="logo"><img src="img/logo-g.png" alt=""></a>
+      <input type="checkbox" id="toggler" />
+      <label for="toggler"><i class="fa-solid fa-bars"></i></label>
+      <div class="menu">
+        <ul class="list">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="backnav"></div>
+    <div class="container">
+        <div class="section">
+          <h1>Log in now and enjoy our pizzas!</h1>
+          <form action="" method="post" autocomplete="off">
+            <br />
+            <div class="input-group">
+              <input type="text" id="email" class="input" placeholder="Email" />
+              <label for="email" class="input-label" id="labelemail">Email</label>
+            </div>
+            <br />
+            <div class="input-group">
+              <input type="password" id="password" class="input" placeholder="Password" />
+              <label for="password" class="input-label">Password</label>
+              <span class="fa-regular fa-eye" id="olho"></span>
+              <span class="fa-regular fa-eye-slash" id="olho1"></span>
+            </div>
+            <br />
+            <div class="checkbox-group">
+              <div class="checkbox-wrapper-39">
+                <label>
+                  <input type="checkbox" id="logged" />
+                  <span class="checkbox"></span>
+                </label>
+              </div>
+              <label for="logged">Stay logged</label>
+            </div>
+            <br />
+            <div class="button-group">
+              <input type="submit" value="Login" />
+            </div>
+            <small><div><p id="pl"></p><p id="mbox">instead log in with</p><p id="pr"></p></div></small>
+            <div class="social-group">
+              <a href="" class="links"><div class="google">
+                <img src="img/google.svg" alt=""></i
+                ><p>google</p>
+              </div></a>
+              <a href="" class="links"><div class="facebook">
+                <img src="img/facebook.svg" alt="">
+                <p>facebook</p>
+              </div></a>
+            </div>
+            <div class="signup">
+              <p>don't have an account?</p>
+              <a href="register.html">sign up</a>
+            </div>
+          </form>
+        </div>
+    </div>
+  </body>
+  <script>
+    var senha = $("#password");
+    var olho = $("#olho");
+    var olho1 = $("olho1");
+
+    $("#olho1").css("display", "none");
+
+    olho.click(function () {
+      senha.attr("type", "text");
+      $("#olho").css("display", "none");
+      $("#olho1").css("display", "block");
+    });
+    $("#olho1").click(function () {
+      $("#password").attr("type", "password");
+      $("#olho1").css("display", "none");
+      $("#olho").css("display", "block");
+    });
+  </script>
+</html>
