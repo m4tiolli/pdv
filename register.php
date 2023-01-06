@@ -145,7 +145,7 @@ if (isset($_POST['submit'])) {
     } else {
     content.style.display = "block";
     window.scrollTo(0, 1000);
-    } alterou mesmo ass
+    }
   }
 </script>
 <script>
