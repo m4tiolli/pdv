@@ -144,8 +144,8 @@ if (isset($_POST['submit'])) {
       alert("Please fill in all fields.")
     } else {
     content.style.display = "block";
-    window.location = "#postalcode";
-  }
+    window.scrollTo(0, 1000);
+    } alterou mesmo ass
   }
 </script>
 <script>
