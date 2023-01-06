@@ -98,7 +98,7 @@ if (isset($_POST['submit'])) {
           </div>
           <br />
           <div class="button-group">
-            <span class="next-button" onmouseup="nextstep()">next</span>
+            <span class="next-button" onclick="nextstep()">next</span>
           </div>
           <div class="signup">
             <p>already have an account?</p>
@@ -137,8 +137,15 @@ if (isset($_POST['submit'])) {
 <script type="text/javascript">
   function nextstep() {
     var content = document.getElementById("section-next");
-    content.style.display = "block"
-    window.location = "#postalcode"
+    var input1 = document.getElementById("fullname");
+    var input2 = document.getElementById("email");
+    var input3 = document.getElementById("password");
+    if(input1.value == 0 || input2.value == 0 || input3.value == 0){
+      alert("Please fill in all fields.")
+    } else {
+    content.style.display = "block";
+    window.location = "#postalcode";
+  }
   }
 </script>
 <script>
